@@ -2,9 +2,9 @@ name: Lint Code Base and Docker Build and Push
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 jobs:
   run-lint-build-push-DockerHub:
     runs-on: ubuntu-latest
@@ -30,7 +30,6 @@ jobs:
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-
 
 
 
